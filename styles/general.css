@@ -1,0 +1,16 @@
+:root{
+    --bg-color:#081b29;
+    --second-bg-color:#112e42;
+    --text-color:#ededed;
+    --main-color:#00abf0;
+}
+
+body{
+   
+    color:var(--text-color);
+    background: var(--bg-color);
+    margin:0;
+    font-family:Kreon,Arial;
+    padding-top:20px;
+
+}

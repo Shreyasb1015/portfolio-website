@@ -1,0 +1,87 @@
+.skills-section {
+    height: 600px;
+    margin-top: 200px;
+    border-bottom: 4px solid var(--text-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.skills-title {
+    height: 80px;
+    border-top: 4px solid var(--text-color);
+    border-bottom: 4px solid var(--text-color);
+    box-shadow: 0 0 15px var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+.skills-grid {
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 30px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.percentage-bar {
+    border-radius: 0.6rem;
+    border: 0.2rem solid var(--text-color);
+    background: var(--bg-color);
+}
+
+.skills-grid div {
+    border: 4px solid var(--main-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px var(--text-color);
+}
+
+.percentage-bar div {
+    background: var(--main-color);
+}
+
+.html-percent {
+    width: 85%;
+}
+
+.c-percent {
+    width: 80%;
+}
+
+.css-percent {
+    width: 75%;
+}
+
+.js-percent {
+    width: 70%;
+}
+
+.python-percent {
+    width: 75%;
+}
+
+.sqlite-percent {
+    width: 70%;
+}
+
+.skills:hover {
+    text-shadow: 0 0 8px var(--text-color);
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .skills-section {
+        margin-top: 550px;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,229 @@
+.home-page {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: -1;
+    margin-left: 10px;
+}
+
+.my-photo {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.about-me {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px;
+    justify-content: center;
+}
+
+.my-pic {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    object-fit: contain;
+    background: transparent;
+    transition: opacity 2s;
+    margin-left: 20px;
+}
+
+.my-pic:hover {
+    background: var(--bg-color);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.intro {
+    display: flex;
+    color: white;
+    padding-top: 50px;
+    height: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.intro p {
+    font-family: Kreon, Arial;
+    font-size: 50px;
+    color: var(--text-color);
+    font-weight: 700;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.intro-tag-line {
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 0.7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    position: relative;
+    animation: animate 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animate {
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+.intro-tag-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: animate-cursor 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes animate-cursor {
+    0%,
+    10%,
+    100% {
+        width: 0%;
+    }
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%,
+    81% {
+        opacity: 0;
+    }
+}
+
+.my-info {
+   
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--text-color);
+    
+    margin-right: 15px;
+    padding: 15px; 
+}
+
+.my-info p {
+    color: var(--text-color);
+    font-size: 20px;
+    font-family: Kreon, Arial;
+    line-height: 1.5;
+    max-width: 100%; 
+    margin: 0; 
+}
+
+.icons-div {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top:30px;
+    padding-left:20px
+}
+
+.icons-div a {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    background: var(--main-color);
+    box-shadow: 0px 0px 20px var(--text-color);
+}
+
+.social-media-icon {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.icons-div a:hover {
+    background: var(--text-color);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--second-bg-color);
+}
+
+.intro-line:hover {
+    text-shadow: 0 0 12px var(--main-color);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .intro-tag-line {
+        font-size: 20px;
+    }
+    .intro-tag-line::before {
+        animation-delay: 2.3s;
+    }
+    .icons-div {
+        opacity: 0;
+    }
+    .my-info {
+        margin-right: 500px;
+        padding-right: 30px;
+        height: 400px;
+        max-width: 80%;
+    }
+    .my-info p {
+        width: 80%;
+        line-height: 25px;
+    }
+    .intro {
+        padding-left: 15px;
+    }
+    .about-me {
+        max-width: none;
+    }
+    .my-photo {
+        display: none;
+    }
+    .my-info {
+        margin-right: 0;
+        height: auto;
+    }
+    .intro p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .icons-div {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    .my-info {
+        border: none;
+        box-shadow: none;
+    }
+    .icons-div {
+        display: none;
+    }
+}
